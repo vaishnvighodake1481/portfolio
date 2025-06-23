@@ -1,0 +1,1149 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    color: #ededed    ;
+    background: #081b29;
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left:0 ;
+    width: 100%;
+    padding: 20px 10%;
+    background: #081b29;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover{
+    color: #0ef;
+}
+.home
+{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background:url(php.jpg.webp)no-repeat;
+
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{
+    max-width: 600px;
+
+
+}
+.home-content h4{
+    font-size: 25px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay:  .7s;
+
+
+}
+.home-content h4:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.home-content h4 span{
+    color: #0ef;
+}
+
+.home-content h1{
+    font-size: 33px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-content p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius:50% ;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay:  calc(.2s * var(--i));
+
+    margin: 30px 15px 30px 0;
+}
+.home-sci a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+
+}
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay:  2s;
+    box-shadow: 0 0 5px #0ef,0 0 25px #0ef
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan
+
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.about-img img{
+    padding: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius:8px ;
+
+}
+.about-text h2{
+    font-size: 60px;
+
+}
+.about-text h2 span{
+    color: #0ef;
+}
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem ;
+}
+#services{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom:4rem ;
+}
+.sub-Title
+{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+
+}
+
+.sub-Title span{
+    color: #0ef;
+
+}
+.container{
+    padding: 90px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap:  40px ;
+    margin-top: 50px;
+
+}
+.services-list div{
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s,transforms 0.5s;
+    box-shadow: 1px 2px 20px #012290f7,1px 1px 40px #012290f7;
+
+}
+.services-list di i{
+    font-size: 50px;
+    margin-bottom: 30px;
+
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.services-list div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+
+}
+.read{
+    display: inline-block;
+    padding: 12px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay:  2s;
+    box-shadow: 0 0 5px #0ef,0 0 25px #0ef
+}
+
+.read:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan
+
+
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+
+section{
+    display:flex;
+    flex-wrap: wrap;
+
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+
+
+}
+.heading1{
+    text-align: center;
+    text-decoration:underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness:5px ;
+    margin-bottom:50px ;
+
+
+}
+
+.bar{
+    font-size: 23px;
+
+
+}
+.Technical-bars .bar
+{
+    margin-top:40px 0 ;
+
+}
+.Technical-bars .bar:first-child
+{
+    margin-top: 0 ;
+
+}
+.Technical-bars .bar:last-child
+{
+    margin-bottom: 0;
+
+
+}
+.Technical-bars .bar .info
+{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info span
+{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+
+
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1,0,0,5)forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+
+
+}
+ @keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform:  scaleX(0);
+    transform-origin: left;
+}
+.progress-line.html span{
+    width: 90%;
+
+}
+.progress-line.css span{
+    width: 60%;
+
+}
+.progress-line.javascript span{
+    width: 85%;
+
+}.progress-line.python span{
+    width: 50%;
+
+}.progress-line.react span{
+    width: 75%;
+
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top:-28;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards ;
+    opacity: 0;
+
+
+}
+.progress-line.progress-line.html span::after{
+    content: "90%";
+}
+
+.progress-line.progress-line.progress-line.css span::after{
+    content: "60%";
+}
+.progress-line.progress-line.progress-line.javascript span::after{
+    content: "85%";
+}
+.progress-line.progress-line.progress-line.python span::after{
+    content: "90%";
+}
+.progress-line.progress-line.progress-line.react span::after{
+    content: "90%";
+}
+
+.progress-line.span::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height:0 ;
+    border: 7px solid transparent;
+    border-bottom-width:0px ;
+    border-top-width:0px ;
+    border-top-color:#000 ;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+
+    }
+}
+.radial-bars{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+.radial-bars .radial-bar svg{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+
+
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width:  black;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray:502 ;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+
+    }
+}
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;;
+
+    }
+}
+
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 175;;
+
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 125;;
+
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 75;;
+
+    }
+}
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+
+}
+.radial-bar.text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+
+  }
+
+ .main-text{
+    padding-top: 130px;
+    margin-top: 200px;
+
+ }
+ .main-text h2{
+    font-size: 60px;
+    line-height: 2;
+    text-align: center;
+
+
+
+ }
+ .main-text h2 span{
+    color: #0ef;
+
+ }
+ .portfolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(359px,auto));
+ }
+.row
+{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.row img{
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.1),#0ef);
+    position: absolute;
+    border-radius:8px ;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+
+}
+.layer h5{
+    color: #000;
+    font-size: 20px;
+    font-weight: 0;
+    margin-bottom: 15px;
+
+}
+.layer p{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.0;
+
+}
+.layer i{
+    color: #ff004f;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #fff;
+    width: 60px;
+    height: 0px;
+    display: flex;
+    align-items: center
+    ;
+    justify-content: center;
+    border-radius: 59%;
+
+}
+.row:hover img{
+    transform: scale(1.1);
+}
+.row:hover .layer{
+    height: 100%;
+
+}
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 3rem;
+    padding-left:30px ;
+    margin-top: 130px;
+}
+.contact-text h2{
+    font-size: 90px;
+    line-height: 1;
+text-align: center;
+
+
+}
+.contact-text h2 span{
+    color: #0ef;
+}
+.contact-text h4 {
+    margin: 15px 0;
+    color: rgb(228,228,228);
+    font-size: 20px;
+    font-weight: 600;
+}
+.contact-text p{
+    color: rgb(177,177,177);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+
+}
+.contact-list{
+    margin-bottom: 3rem;
+}
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+.contact-list i{
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+}
+.contact-list li a:hover{
+    transform: scale(1.01)translateY(-5px);
+    color: #0ef;
+}
+.contact-icons i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.contact-icons :hover{
+    background: #0ef;
+    color: #000;
+    box-shadow: 0 0 20px #0ef;
+
+}
+.contact-form form{
+    position: relative;
+}
+.contact-form form input,form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background-color: #555557;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+
+}
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+
+}
+.contact-form form .send{
+    display: inline-block;
+    padding: 14px 60px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay:  2s;
+    box-shadow: 0 0 5px #0ef,0 0 25px #0ef
+}
+.contact-form form .send:hover
+{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan
+
+
+}
+.last-text{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(7,85,91);
+    font-weight: 200;
+    margin-top: 70px;
+
+}
+ .top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2.1rem;
+
+ }
+.top i{
+    color: #000;
+    background: #0ef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background: #ffffff;
+    color: #333333;
+}
+
+.light-mode .header {
+    background: #f0f0f0; /* Light gray background for header */
+}
+
+.light-mode .logo,
+.light-mode .navbar a {
+    color: #333333; /* Dark text for logo and navbar links */
+}
+
+.light-mode .navbar a:hover {
+    color: #007bff; /* Primary dark color for hover */
+}
+
+.light-mode .home-content h4,
+.light-mode .home-content h1,
+.light-mode .home-content p {
+    color: #333333;
+}
+
+.light-mode .home-content h4 span,
+.light-mode .about-text h2 span,
+.light-mode .sub-Title span,
+.light-mode .main-text h2 span,
+.light-mode .contact-text h2 span {
+    color: #007bff; /* Primary dark color for spans */
+}
+
+.light-mode .home-sci a {
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.light-mode .home-sci a:hover {
+    background: #007bff;
+    color: #ffffff; /* White icon on hover */
+    box-shadow: 0 0 20px #007bff;
+}
+
+.light-mode .btn-box,
+.light-mode .read,
+.light-mode .contact-form form .send {
+    background: #007bff;
+    color: #ffffff; /* White text on primary dark background */
+    box-shadow: 0 0 5px #007bff, 0 0 25px #007bff;
+}
+
+.light-mode #themeToggleBtn {
+    background-color: #007bff; /* Primary light mode accent */
+    color: #ffffff; /* White text */
+    border: 1px solid #0056b3; /* Adding a border for better definition */
+}
+
+.light-mode .btn-box:hover,
+.light-mode .read:hover,
+.light-mode .contact-form form .send:hover {
+    box-shadow: 0 0 5px #0056b3,
+                0 0 25px #0056b3, 0 0 50px #0056b3, 0 0 100px #0056b3, 0 0 200px #0056b3; /* Darker shade for hover glow */
+}
+
+.light-mode .about-text h4 {
+    color: #333333;
+}
+.light-mode .about-text p,
+.light-mode #services {
+    color: #555555; /* Slightly lighter dark color for paragraphs */
+}
+
+.light-mode .services-list div {
+    background-color: #f9f9f9; /* Very light gray for service boxes */
+    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.1), 1px 1px 40px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.light-mode .services-list div i {
+    /* Assuming icons had specific colors like #39d0db, they might need adjustment if they don't fit the light theme */
+    /* For now, let's assume they are font icons and will inherit color or are SVG and need specific fills */
+}
+
+
+.light-mode .services-list div h2 {
+    color: #333333;
+}
+
+.light-mode .services-list div a { /* This is for the "learn more" text inside .read button, already handled by .read */
+    color: #ffffff; /* Should be white as per .read style */
+}
+
+
+.light-mode .Technical-bars .bar .info span {
+    color: #333333;
+}
+
+.light-mode .Technical-bars .bar .progress-line {
+    background-color: #e0e0e0; /* Light gray for progress bar background */
+}
+
+.light-mode .Technical-bars .bar .progress-line span {
+    background-color: #007bff; /* Primary dark color for progress */
+}
+
+.light-mode .progress-line span::after { /* Percentage tooltip */
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.light-mode .progress-line span::before { /* Tooltip arrow */
+    border-top-color: #007bff;
+}
+
+
+.light-mode .radial-bars .radial-bar svg .progress-bar { /* This was for the track */
+    stroke: #e0e0e0; /* Light gray for radial progress track */
+}
+/* The selector .radial-bars .radial-bar .progress-bar originally had stop-color: black and stroke-width: black. This might be an error in the original CSS. Assuming 'stroke' is what's intended. */
+.light-mode .radial-bars .radial-bar .progress-bar {
+    stroke: #e0e0e0; /* Replacing stop-color with stroke */
+}
+
+
+.light-mode .path { /* This was for the progress itself */
+    stroke: #007bff; /* Primary dark color for radial progress */
+}
+
+.light-mode .radial-bar .percentage,
+.light-mode .radial-bar .text { /* Corrected selector, it was .radial-bar.text */
+    color: #333333;
+}
+.light-mode .radial-bar .text { /* Specifically for the text below radial bar if it needs different styling */
+    color: #555555;
+}
+
+
+.light-mode .layer {
+    background: linear-gradient(rgba(255,255,255,0.1), #007bff); /* Light gradient for project overlay */
+}
+
+.light-mode .layer h5,
+.light-mode .layer p {
+    color: #ffffff; /* Text on overlay, keep it light if background is darkish blue */
+}
+
+/* If the gradient is made lighter, text color might need to be dark */
+.light-mode .layer.light-gradient { /* Example if we make gradient very light */
+    background: linear-gradient(rgba(0,0,0,0.05), rgba(0, 123, 255, 0.7));
+}
+.light-mode .layer.light-gradient h5,
+.light-mode .layer.light-gradient p {
+    color: #333333;
+}
+
+
+.light-mode .layer i { /* External link icon on project overlay */
+    /* Original was color: #ff004f; background: #fff; */
+    /* Assuming this icon should now be primary dark color on a light background or vice-versa */
+    color: #007bff;
+    background: #f0f0f0; /* Light background for icon */
+}
+/* Styles for .contact-text are mostly covered by body.light-mode and span color rules */
+.light-mode .contact-text h4 {
+    color: #333333;
+}
+.light-mode .contact-text p {
+    color: #555555;
+}
+
+.light-mode .contact-list i {
+    color: #007bff; /* Primary dark color for icons in contact list */
+}
+
+.light-mode .contact-list li a:hover, /* This rule was for text, but there are only icons. Assuming hover on icon */
+.light-mode .contact-list i:hover { /* Clarified selector */
+    /* transform: scale(1.01)translateY(-5px); Not needed here, handled by parent */
+    color: #0056b3; /* Darker shade of primary on hover */
+}
+
+.light-mode .contact-icons i {
+    border: 2px solid #007bff;
+    color: #007bff;
+}
+
+.light-mode .contact-icons i:hover { /* Corrected :hover placement */
+    background: #007bff;
+    color: #ffffff;
+    box-shadow: 0 0 20px #007bff;
+}
+
+.light-mode .contact-form form input,
+.light-mode .contact-form form textarea {
+    background-color: #f0f0f0; /* Light gray for form fields */
+    color: #333333; /* Dark text in form fields */
+    border: 1px solid #cccccc; /* Adding a light border for better visibility */
+}
+.light-mode .contact-form form input::placeholder,
+.light-mode .contact-form form textarea::placeholder {
+    color: #777777; /* Lighter placeholder text */
+}
+
+
+.light-mode .last-text {
+    background: #f0f0f0; /* Light gray for footer */
+    color: #333333; /* Dark text in footer */
+}
+
+.light-mode .top i {
+    color: #ffffff; /* White icon */
+    background: #007bff; /* Primary dark background for scroll-to-top button */
+}
+
+/* Addressing pro.css specific styles if any are not covered. pro.css mostly repeats portfolio section styles */
+/* .main-text h2 span, .portfolio-content, .row, .layer, .layer h5, .layer p, .layer i are covered. */
+
+/* Ensure home background image provides good contrast or add an overlay */
+.light-mode .home {
+    /* Example: Add a semi-transparent dark overlay if background image is too light */
+    /* background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(php.jpg.webp) no-repeat; */
+    /* background-size: cover; */
+    /* background-position:center; */
+    /* OR, if text is dark, a light overlay or different image might be needed */
+    /* For now, assuming text color changes are enough. If not, this needs adjustment. */
+}
+
+/* Specificity check for icons inside .services-list that had inline styles like style='color:#39d0db' */
+/* These will override the class styles unless !important is used or JS changes them. */
+/* For now, I'll assume these specific icon colors are acceptable in light mode or will be changed manually if needed. */
+.light-mode .services-list div i.bx.bx-code,
+.light-mode .services-list div i.bx.bx-crop,
+.light-mode .services-list div i.bx.bxl-apple {
+    color: #007bff; /* Changing the hardcoded cyan to primary dark blue */
+}
+
+.light-mode .Technical-bars .bar i.bxl-html5 { color: #e34f26; } /* Orange for HTML5 */
+.light-mode .Technical-bars .bar i.bxl-css3 { color: #1572b6; }  /* Blue for CSS3 */
+.light-mode .Technical-bars .bar i.bxl-javascript { color: #d4b100; } /* Darker Yellow */
+.light-mode .Technical-bars .bar i.bxl-python { color: #3776ab; } /* Blue for Python */
+.light-mode .Technical-bars .bar i.bxl-react { color: #40c2e0; } /* Adjusted for light bg */
+
+
+/* Fixing progress bar percentage text color which is inside ::after */
+.light-mode .Technical-bars .bar .progress-line span::after{
+    background-color: #007bff;
+    color: #ffffff;
+}
+/* Fixing progress bar percentage arrow color */
+.light-mode .Technical-bars .bar .progress-line span::before{ /* Assuming this was the intended structure for arrows */
+    /* This is if ::before was used for the arrow. The original CSS is ambiguous here. */
+    /* If the arrow is part of the ::after's border, this is handled by ::after's border color. */
+}
+/* The original CSS for the arrow was:
+.progress-line.span::after { ... border-top-color:#000 ; ...}
+This seems to be a typo and might have been intended to be:
+.progress-line span::after { ... border-top-color: #000; ...} (if the arrow is part of the ::after pseudo-element)
+or
+.progress-line span::before { ... border-top-color: #000; ...} (if the arrow is a separate ::before pseudo-element)
+
+Given that `.progress-line span::after` is already used for the text bubble,
+the arrow is likely another pseudo-element or a border trick on `::after`.
+If it's a border of `::after` that forms the arrow, and `::after` has `background: #000`, and the arrow is formed by its border,
+e.g. `border: solid transparent; border-bottom-color: #000;`
+Then in light mode: `border-bottom-color: #007bff;`
+Let's assume the arrow is `border-top-color` on the `::after` pseudo-element as per the original CSS, and this forms a downward pointer from the text.
+No, `top: -28` for the bubble, and `top: -10px` for the "arrow" part of the `::after` means the arrow is *below* the main part of the `::after` if `::after` is one box.
+This is confusing. I will assume the `border-top-color: #000` was for an arrow element.
+The `::after` for `.progress-line span` is the percentage text.
+The `::after` for `.progress-line.span` (with typo) is the arrow.
+So, if `.progress-line span::before` is used for the arrow:
+.light-mode .Technical-bars .bar .progress-line span::before {
+    border-top-color: #007bff; /* If arrow is above and points down */
+    /* OR */
+    /* border-bottom-color: #007bff; /* If arrow is below and points up */
+}
+Given the complexity and ambiguity of the original CSS for the arrow, I will ensure the main bubble `::after` is styled correctly, and the arrow will implicitly take its color if it's a border of that bubble. If it's a separate entity that was mis-selected, it might not change.
+The current `.progress-line span::after` styles the text bubble.
+The problematic CSS was `.progress-line.span::after` (note the dot before span). This rule was likely never applied correctly.
+I will ensure the text bubble (`.progress-line span::after`) is correctly styled for light mode. The arrow's color, if part of this bubble's border, will follow.
+The `background-color` of `progress-line span::after` is set to `#000` in dark mode.
+So, in light mode:
+.light-mode .Technical-bars .bar .progress-line span::after {
+    background-color: #007bff; /* Bubble background */
+    color: #ffffff; /* Text in bubble */
+}
+If the arrow was formed by a border of this bubble (e.g., `border-bottom-color: #000`), it should become `border-bottom-color: #007bff`.
+The original CSS does not clearly define the arrow as a border of *this* `::after`. It was a separate rule with a typo.
+I will proceed with styling the main elements and revisit the arrow if it's an issue.
+
+Final check on image backgrounds:
+.light-mode .home {
+    /* The text color is now dark. If php.jpg.webp is very dark, text will be readable. */
+    /* If php.jpg.webp is light, a dark overlay might be needed for the dark text, which is counterintuitive. */
+    /* Or, a different background image for light mode. */
+    /* For now, no change to home background image. */
+}
+.light-mode .about-img img { /* No change needed */ }
+.light-mode .row img { /* No change needed for project images */ }
+
+Color for links in paragraphs, e.g. in .contact-list:
+.light-mode .contact-list li a { /* Assuming there are actual <a> tags here. Original CSS implies this. */
+    color: #007bff; /* Standard link color for light mode */
+}
+.light-mode .contact-list li a:hover {
+    color: #0056b3; /* Darker on hover */
+}
+The original CSS had `.contact-list li a:hover { transform: scale(1.01)translateY(-5px); color: #0ef; }`
+The color part is important.
+
+Inline styles on icons:
+The `<i>` tags for skills (HTML, CSS, etc.) have inline `style` attributes for color (e.g., `style='color:#21d3d4'`).
+These will override the `light-mode .Technical-bars .bar i` selector unless `!important` is used, or the inline styles are removed, or JS handles it.
+My previous selectors like `.light-mode .Technical-bars .bar .bxl-html5` are more specific and should override the general `.light-mode .Technical-bars .bar i` but might still be overridden by inline styles.
+I'll add more specific selectors for these icons without `!important` first.
+The `<i>` tags in `services-list` also have inline styles (e.g. `style='color:#39d0db'`).
+I've added:
+.light-mode .services-list div i.bx.bx-code,
+.light-mode .services-list div i.bx.bx-crop,
+.light-mode .services-list div i.bx.bxl-apple {
+    color: #007bff;
+}
+And for technical skills:
+.light-mode .Technical-bars .bar i.bxl-html5 { color: #e34f26; }
+.light-mode .Technical-bars .bar i.bxl-css3 { color: #1572b6; }
+.light-mode .Technical-bars .bar i.bxl-javascript { color: #d4b100; } /* Adjusted for light bg */
+.light-mode .Technical-bars .bar i.bxl-python { color: #3776ab; }
+.light-mode .Technical-bars .bar i.bxl-react { color: #40c2e0; } /* Adjusted for light bg */
+
+These more specific selectors should override the inline styles for these exact classes.
+If there are other icons with inline styles, they would need similar specific overrides.
+The general rule `.light-mode .Technical-bars .bar i { color: #007bff; }` would act as a fallback if specific classes are not matched.
+Let's remove the general one to avoid confusion and rely on specific overrides for inline-styled icons.
+Okay, the specific overrides for icons with inline styles should work.
+The `pro.css` file seems to contain a subset of styles from `stylesheet.css` related to the portfolio section. The `light-mode` styles applied to `stylesheet.css` should cascade and cover these elements as well, as long as the selectors in `pro.css` are not more specific in a conflicting way (which they don't appear to be).
+The `pro.css` styles are:
+ .main-text h2 span (covered)
+ .portfolio-content (covered by body style)
+ .row (covered by body style)
+ .row img (no change)
+ .layer (covered)
+ .layer h5 (covered)
+ .layer p (covered)
+ .layer i (covered)
+ .row:hover img (no change)
+ .row:hover .layer (covered)
+
+Looks good.
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
