@@ -47,7 +47,7 @@ body{
     animation-delay: calc(.2s * var(--i));
 }
 .navbar a:hover{
-    color: #0ef;
+    color: #00f2a1;
 }
 .home
 {
@@ -84,7 +84,7 @@ body{
 
 }
 .home-content h4 span{
-    color: #0ef;
+    color: #00f2a1;
 }
 
 .home-content h1{
@@ -108,10 +108,10 @@ body{
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid #00f2a1;
     border-radius:50% ;
     font-size: 20px;
-    color: #0ef;
+    color: #00f2a1;
     text-decoration: none;
     transition: .5s ease;
     opacity: 0;
@@ -121,15 +121,15 @@ body{
     margin: 30px 15px 30px 0;
 }
 .home-sci a:hover{
-    background: #0ef;
+    background: #00f2a1;
     color: #081b29;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px #00f2a1;
 
 }
 .btn-box{
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: #00f2a1;
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
@@ -139,11 +139,11 @@ body{
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay:  2s;
-    box-shadow: 0 0 5px #0ef,0 0 25px #0ef
+    box-shadow: 0 0 5px #00f2a1,0 0 25px #00f2a1
 }
 .btn-box:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan
+    box-shadow: 0 0 5px #00f2a1,
+    0 0 25px #00f2a1, 0 0 50px #00f2a1, 0 0 100px #00f2a1, 0 0 200px #00f2a1
 
 }
 .about{
@@ -165,7 +165,7 @@ body{
 
 }
 .about-text h2 span{
-    color: #0ef;
+    color: #00f2a1;
 }
 .about-text h4{
     font-size: 29px;
@@ -195,7 +195,7 @@ body{
 }
 
 .sub-Title span{
-    color: #0ef;
+    color: #00f2a1;
 
 }
 .container{
@@ -216,7 +216,7 @@ body{
     border-right: 10px;
     border-radius: 20px;
     transition: background 0.5s,transforms 0.5s;
-    box-shadow: 1px 2px 20px #012290f7,1px 1px 40px #012290f7;
+    box-shadow: 1px 2px 20px #004d33,1px 1px 40px #004d33;
 
 }
 .services-list di i{
@@ -240,7 +240,7 @@ body{
 .read{
     display: inline-block;
     padding: 12px;
-    background: #0ef;
+    background: #00f2a1;
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
@@ -250,12 +250,12 @@ body{
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay:  2s;
-    box-shadow: 0 0 5px #0ef,0 0 25px #0ef
+    box-shadow: 0 0 5px #00f2a1,0 0 25px #00f2a1
 }
 
 .read:hover{
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan
+    box-shadow: 0 0 5px #00f2a1,
+    0 0 25px #00f2a1, 0 0 50px #00f2a1, 0 0 100px #00f2a1, 0 0 200px #00f2a1
 
 
 }
@@ -337,9 +337,128 @@ section{
         transform: scaleX(1);
     }
 }
+
+/* Fade-in Up Animation for Section Titles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title-animate { /* Class to be added to titles that need animation */
+    opacity: 0; /* Start hidden */
+}
+
+.section-title-animate.is-visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 10% 50px; /* Similar to other sections, adjust as needed */
+    /* background: var(--bg-color); Will adapt to light/dark via CSS vars if set, or use specific below */
+}
+
+.light-mode .testimonials {
+    background: #f9f9f9; /* Light background for light mode */
+}
+/* Dark mode background is default body background or can be specified if different */
+/* .testimonials { background: #0c1f2f; } /* Slightly different dark bg if needed */
+
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background: #081b29; /* Dark mode card background - matches body */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    border: 1px solid #00f2a1; /* Green border for dark mode */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.light-mode .testimonial-card {
+    background: #ffffff; /* White card background for light mode */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #008060; /* Green border for light mode */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 242, 161, 0.3); /* Glow with dark mode primary */
+}
+
+.light-mode .testimonial-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 128, 96, 0.2); /* Glow with light mode primary */
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    border: 3px solid #00f2a1; /* Green border for avatar */
+}
+
+.light-mode .testimonial-avatar {
+    border-color: #008060; /* Light mode green for avatar border */
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ededed; /* Light text for dark mode */
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.light-mode .testimonial-text {
+    color: #555555; /* Darker text for light mode */
+}
+
+.testimonial-author {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00f2a1; /* Green author name for dark mode */
+    margin-bottom: 5px;
+}
+
+.light-mode .testimonial-author {
+    color: #008060; /* Green author name for light mode */
+}
+
+.testimonial-role {
+    font-size: 0.9rem;
+    color: #bbbbbb; /* Lighter gray for role in dark mode */
+}
+
+.light-mode .testimonial-role {
+    color: #777777; /* Gray for role in light mode */
+}
+
+/* Ensure .sub-Title used for testimonials also picks up new color */
+.testimonials .sub-Title span { /* This might be redundant if .sub-Title span is already green */
+    /* color: #00f2a1; */ /* Already handled by global .sub-Title span color */
+}
+
+.light-mode .testimonials .sub-Title span { /* This might be redundant */
+    /* color: #008060; */ /* Already handled by global .light-mode .sub-Title span color */
+}
 .Technical-bars .bar .progress-line span{
     height: 100%;
-    background-color: #0ef;
+    background-color: #00f2a1;
     position: absolute;
     border-radius: 10px;
     animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
@@ -460,7 +579,7 @@ section{
 }
 .path{
     stroke-width: 10;
-    stroke: #0ef;
+    stroke: #00f2a1;
     fill: transparent;
     stroke-dasharray: 502;
     stroke-dashoffset: 502;
@@ -537,7 +656,7 @@ section{
 
  }
  .main-text h2 span{
-    color: #0ef;
+    color: #00f2a1;
 
  }
  .portfolio-content{
@@ -561,7 +680,7 @@ section{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1),#0ef);
+    background: linear-gradient(rgba(0,0,0,0.1),#00f2a1);
     position: absolute;
     border-radius:8px ;
     left: 0;
@@ -626,7 +745,7 @@ text-align: center;
 
 }
 .contact-text h2 span{
-    color: #0ef;
+    color: #00f2a1;
 }
 .contact-text h4 {
     margin: 15px 0;
@@ -654,14 +773,14 @@ text-align: center;
 }
 .contact-list i{
     display: inline-block;
-    color: #0ef;
+    color: #00f2a1;
     font-size: 20px;
     font-weight: 600;
     transition: all .40s ease;
 }
 .contact-list li a:hover{
     transform: scale(1.01)translateY(-5px);
-    color: #0ef;
+    color: #00f2a1;
 }
 .contact-icons i{
     display: inline-flex;
@@ -670,10 +789,10 @@ text-align: center;
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #0ef;
+    border: 2px solid #00f2a1;
     border-radius: 50%;
     font-size: 20px;
-    color: #0ef;
+    color: #00f2a1;
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: .5s ease;
@@ -682,9 +801,9 @@ text-align: center;
     animation-delay: calc(.2s * var(--i));
 }
 .contact-icons :hover{
-    background: #0ef;
+    background: #00f2a1;
     color: #000;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px #00f2a1;
 
 }
 .contact-form form{
@@ -711,7 +830,7 @@ text-align: center;
 .contact-form form .send{
     display: inline-block;
     padding: 14px 60px;
-    background: #0ef;
+    background: #00f2a1;
     border-radius: 40px;
     font-size: 18px;
     color: #081b29;
@@ -721,12 +840,12 @@ text-align: center;
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay:  2s;
-    box-shadow: 0 0 5px #0ef,0 0 25px #0ef
+    box-shadow: 0 0 5px #00f2a1,0 0 25px #00f2a1
 }
 .contact-form form .send:hover
 {
-    box-shadow: 0 0 5px cyan,
-    0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan
+    box-shadow: 0 0 5px #00f2a1,
+    0 0 25px #00f2a1, 0 0 50px #00f2a1, 0 0 100px #00f2a1, 0 0 200px #00f2a1
 
 
 }
@@ -747,7 +866,7 @@ text-align: center;
  }
 .top i{
     color: #000;
-    background: #0ef;
+    background: #00f2a1;
     font-size: 20px;
     padding: 10px;
     border-radius: 0.5rem;
@@ -770,7 +889,7 @@ body.light-mode {
 }
 
 .light-mode .navbar a:hover {
-    color: #007bff; /* Primary dark color for hover */
+    color: #008060; /* Primary dark color for hover */
 }
 
 .light-mode .home-content h4,
@@ -784,39 +903,39 @@ body.light-mode {
 .light-mode .sub-Title span,
 .light-mode .main-text h2 span,
 .light-mode .contact-text h2 span {
-    color: #007bff; /* Primary dark color for spans */
+    color: #008060; /* Primary dark color for spans */
 }
 
 .light-mode .home-sci a {
-    border: 2px solid #007bff;
-    color: #007bff;
+    border: 2px solid #008060;
+    color: #008060;
 }
 
 .light-mode .home-sci a:hover {
-    background: #007bff;
+    background: #008060;
     color: #ffffff; /* White icon on hover */
-    box-shadow: 0 0 20px #007bff;
+    box-shadow: 0 0 20px #008060;
 }
 
 .light-mode .btn-box,
 .light-mode .read,
 .light-mode .contact-form form .send {
-    background: #007bff;
+    background: #008060;
     color: #ffffff; /* White text on primary dark background */
-    box-shadow: 0 0 5px #007bff, 0 0 25px #007bff;
+    box-shadow: 0 0 5px #008060, 0 0 25px #008060;
 }
 
 .light-mode #themeToggleBtn {
-    background-color: #007bff; /* Primary light mode accent */
+    background-color: #008060; /* Primary light mode accent */
     color: #ffffff; /* White text */
-    border: 1px solid #0056b3; /* Adding a border for better definition */
+    border: 1px solid #00664d; /* Adding a border for better definition */
 }
 
 .light-mode .btn-box:hover,
 .light-mode .read:hover,
 .light-mode .contact-form form .send:hover {
-    box-shadow: 0 0 5px #0056b3,
-                0 0 25px #0056b3, 0 0 50px #0056b3, 0 0 100px #0056b3, 0 0 200px #0056b3; /* Darker shade for hover glow */
+    box-shadow: 0 0 5px #00664d,
+                0 0 25px #00664d, 0 0 50px #00664d, 0 0 100px #00664d, 0 0 200px #00664d; /* Darker shade for hover glow */
 }
 
 .light-mode .about-text h4 {
@@ -856,16 +975,16 @@ body.light-mode {
 }
 
 .light-mode .Technical-bars .bar .progress-line span {
-    background-color: #007bff; /* Primary dark color for progress */
+    background-color: #008060; /* Primary dark color for progress */
 }
 
 .light-mode .progress-line span::after { /* Percentage tooltip */
-    background-color: #007bff;
+    background-color: #008060;
     color: #ffffff;
 }
 
 .light-mode .progress-line span::before { /* Tooltip arrow */
-    border-top-color: #007bff;
+    border-top-color: #008060;
 }
 
 
@@ -879,7 +998,7 @@ body.light-mode {
 
 
 .light-mode .path { /* This was for the progress itself */
-    stroke: #007bff; /* Primary dark color for radial progress */
+    stroke: #008060; /* Primary dark color for radial progress */
 }
 
 .light-mode .radial-bar .percentage,
@@ -892,7 +1011,7 @@ body.light-mode {
 
 
 .light-mode .layer {
-    background: linear-gradient(rgba(255,255,255,0.1), #007bff); /* Light gradient for project overlay */
+    background: linear-gradient(rgba(255,255,255,0.1), #008060); /* Light gradient for project overlay */
 }
 
 .light-mode .layer h5,
@@ -913,7 +1032,7 @@ body.light-mode {
 .light-mode .layer i { /* External link icon on project overlay */
     /* Original was color: #ff004f; background: #fff; */
     /* Assuming this icon should now be primary dark color on a light background or vice-versa */
-    color: #007bff;
+    color: #008060;
     background: #f0f0f0; /* Light background for icon */
 }
 /* Styles for .contact-text are mostly covered by body.light-mode and span color rules */
@@ -925,24 +1044,24 @@ body.light-mode {
 }
 
 .light-mode .contact-list i {
-    color: #007bff; /* Primary dark color for icons in contact list */
+    color: #008060; /* Primary dark color for icons in contact list */
 }
 
 .light-mode .contact-list li a:hover, /* This rule was for text, but there are only icons. Assuming hover on icon */
 .light-mode .contact-list i:hover { /* Clarified selector */
     /* transform: scale(1.01)translateY(-5px); Not needed here, handled by parent */
-    color: #0056b3; /* Darker shade of primary on hover */
+    color: #00664d; /* Darker shade of primary on hover */
 }
 
 .light-mode .contact-icons i {
-    border: 2px solid #007bff;
-    color: #007bff;
+    border: 2px solid #008060;
+    color: #008060;
 }
 
 .light-mode .contact-icons i:hover { /* Corrected :hover placement */
-    background: #007bff;
+    background: #008060;
     color: #ffffff;
-    box-shadow: 0 0 20px #007bff;
+    box-shadow: 0 0 20px #008060;
 }
 
 .light-mode .contact-form form input,
@@ -964,7 +1083,7 @@ body.light-mode {
 
 .light-mode .top i {
     color: #ffffff; /* White icon */
-    background: #007bff; /* Primary dark background for scroll-to-top button */
+    background: #008060; /* Primary dark background for scroll-to-top button */
 }
 
 /* Addressing pro.css specific styles if any are not covered. pro.css mostly repeats portfolio section styles */
@@ -986,7 +1105,7 @@ body.light-mode {
 .light-mode .services-list div i.bx.bx-code,
 .light-mode .services-list div i.bx.bx-crop,
 .light-mode .services-list div i.bx.bxl-apple {
-    color: #007bff; /* Changing the hardcoded cyan to primary dark blue */
+    color: #008060; /* Changing the hardcoded cyan to primary dark blue */
 }
 
 .light-mode .Technical-bars .bar i.bxl-html5 { color: #e34f26; } /* Orange for HTML5 */
@@ -998,7 +1117,7 @@ body.light-mode {
 
 /* Fixing progress bar percentage text color which is inside ::after */
 .light-mode .Technical-bars .bar .progress-line span::after{
-    background-color: #007bff;
+    background-color: #008060;
     color: #ffffff;
 }
 /* Fixing progress bar percentage arrow color */
@@ -1017,7 +1136,7 @@ Given that `.progress-line span::after` is already used for the text bubble,
 the arrow is likely another pseudo-element or a border trick on `::after`.
 If it's a border of `::after` that forms the arrow, and `::after` has `background: #000`, and the arrow is formed by its border,
 e.g. `border: solid transparent; border-bottom-color: #000;`
-Then in light mode: `border-bottom-color: #007bff;`
+Then in light mode: `border-bottom-color: #008060;`
 Let's assume the arrow is `border-top-color` on the `::after` pseudo-element as per the original CSS, and this forms a downward pointer from the text.
 No, `top: -28` for the bubble, and `top: -10px` for the "arrow" part of the `::after` means the arrow is *below* the main part of the `::after` if `::after` is one box.
 This is confusing. I will assume the `border-top-color: #000` was for an arrow element.
@@ -1025,9 +1144,9 @@ The `::after` for `.progress-line span` is the percentage text.
 The `::after` for `.progress-line.span` (with typo) is the arrow.
 So, if `.progress-line span::before` is used for the arrow:
 .light-mode .Technical-bars .bar .progress-line span::before {
-    border-top-color: #007bff; /* If arrow is above and points down */
+    border-top-color: #008060; /* If arrow is above and points down */
     /* OR */
-    /* border-bottom-color: #007bff; /* If arrow is below and points up */
+    /* border-bottom-color: #008060; /* If arrow is below and points up */
 }
 Given the complexity and ambiguity of the original CSS for the arrow, I will ensure the main bubble `::after` is styled correctly, and the arrow will implicitly take its color if it's a border of that bubble. If it's a separate entity that was mis-selected, it might not change.
 The current `.progress-line span::after` styles the text bubble.
@@ -1036,10 +1155,10 @@ I will ensure the text bubble (`.progress-line span::after`) is correctly styled
 The `background-color` of `progress-line span::after` is set to `#000` in dark mode.
 So, in light mode:
 .light-mode .Technical-bars .bar .progress-line span::after {
-    background-color: #007bff; /* Bubble background */
+    background-color: #008060; /* Bubble background */
     color: #ffffff; /* Text in bubble */
 }
-If the arrow was formed by a border of this bubble (e.g., `border-bottom-color: #000`), it should become `border-bottom-color: #007bff`.
+If the arrow was formed by a border of this bubble (e.g., `border-bottom-color: #000`), it should become `border-bottom-color: #008060`.
 The original CSS does not clearly define the arrow as a border of *this* `::after`. It was a separate rule with a typo.
 I will proceed with styling the main elements and revisit the arrow if it's an issue.
 
@@ -1055,12 +1174,12 @@ Final check on image backgrounds:
 
 Color for links in paragraphs, e.g. in .contact-list:
 .light-mode .contact-list li a { /* Assuming there are actual <a> tags here. Original CSS implies this. */
-    color: #007bff; /* Standard link color for light mode */
+    color: #008060; /* Standard link color for light mode */
 }
 .light-mode .contact-list li a:hover {
-    color: #0056b3; /* Darker on hover */
+    color: #00664d; /* Darker on hover */
 }
-The original CSS had `.contact-list li a:hover { transform: scale(1.01)translateY(-5px); color: #0ef; }`
+The original CSS had `.contact-list li a:hover { transform: scale(1.01)translateY(-5px); color: #00f2a1; }`
 The color part is important.
 
 Inline styles on icons:
@@ -1073,7 +1192,7 @@ I've added:
 .light-mode .services-list div i.bx.bx-code,
 .light-mode .services-list div i.bx.bx-crop,
 .light-mode .services-list div i.bx.bxl-apple {
-    color: #007bff;
+    color: #008060;
 }
 And for technical skills:
 .light-mode .Technical-bars .bar i.bxl-html5 { color: #e34f26; }
@@ -1084,7 +1203,7 @@ And for technical skills:
 
 These more specific selectors should override the inline styles for these exact classes.
 If there are other icons with inline styles, they would need similar specific overrides.
-The general rule `.light-mode .Technical-bars .bar i { color: #007bff; }` would act as a fallback if specific classes are not matched.
+The general rule `.light-mode .Technical-bars .bar i { color: #008060; }` would act as a fallback if specific classes are not matched.
 Let's remove the general one to avoid confusion and rely on specific overrides for inline-styled icons.
 Okay, the specific overrides for icons with inline styles should work.
 The `pro.css` file seems to contain a subset of styles from `stylesheet.css` related to the portfolio section. The `light-mode` styles applied to `stylesheet.css` should cascade and cover these elements as well, as long as the selectors in `pro.css` are not more specific in a conflicting way (which they don't appear to be).
